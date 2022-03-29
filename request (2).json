@@ -144,6 +144,46 @@
               "formBody": {
                 "overrideContentType": true,
                 "encoding": "multipart/form-data",
+                "items": []
+              },
+              "bodyType": "Form"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "localhost",
+              "path": "/LP2/api/user/select-all"
+            },
+            "id": "4c1de262-29ad-49ad-94e3-d7661589b958",
+            "name": "select",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "multipart/form-data",
                 "items": [
                   {
                     "enabled": true,

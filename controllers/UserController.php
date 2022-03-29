@@ -17,6 +17,10 @@
             $pass = $_POST['pass'];
             $user = new User($id,$name,$email,$pass);
             $user->update();
+        }elseif ($route[1] == 'select-all') {
+            $user = new User(null,null,null,null);
+            $user->selectAll();
+            
         }else{
             echo "Página não econtrada";
         }

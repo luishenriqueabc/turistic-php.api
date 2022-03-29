@@ -54,5 +54,20 @@ class User{
             echo "Error : " . $e->getMessage();
         }
        }
+       function selectAll(){
+        $db = new Database();
+        try{
+            $stmt = $db->conn->prepare("SELECT * FROM users");
+            $stmt->execute();
+            $result = $stmt->fetchAll
+            (PDO::FETCH_ASSOC);
+            print_r($result);
+            echo "Selecionado";
+        }
+        catch(PDOException $e){
+         echo "Error : " . $e->getMessage();
+     }
+    }
+
   }
 ?>
