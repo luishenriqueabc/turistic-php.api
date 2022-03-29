@@ -83,20 +83,26 @@
                   {
                     "enabled": true,
                     "type": "Text",
+                    "name": "id",
+                    "value": "3"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
                     "name": "name",
-                    "value": "Paulo"
+                    "value": "Joao"
                   },
                   {
                     "enabled": true,
                     "type": "Text",
                     "name": "email",
-                    "value": "Paulo@gmail.com"
+                    "value": "joao@gmail.com"
                   },
                   {
                     "enabled": true,
                     "type": "Text",
                     "name": "pass",
-                    "value": "223344"
+                    "value": "121212"
                   }
                 ]
               },
@@ -113,10 +119,75 @@
                 "version": "V11"
               },
               "host": "localhost",
-              "path": "/LP2/api/user/create"
+              "path": "/LP2/api/user/update"
             },
             "id": "9371938b-e5d2-406c-b52f-faded3ab852b",
             "name": "delete",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ]
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "multipart/form-data",
+                "items": [
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "id",
+                    "value": "3"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "name",
+                    "value": "Joao"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "email",
+                    "value": "joao@gmail.com"
+                  },
+                  {
+                    "enabled": true,
+                    "type": "Text",
+                    "name": "pass",
+                    "value": "121212"
+                  }
+                ]
+              },
+              "bodyType": "Form"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "secure": true,
+                "name": "https",
+                "version": "V11"
+              },
+              "host": "localhost",
+              "path": "/LP2/api/user/update"
+            },
+            "id": "9494c87f-6126-40eb-935d-58c883d4d3c4",
+            "name": "update",
             "headers": [
               {
                 "enabled": true,
