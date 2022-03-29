@@ -7,7 +7,8 @@
             $user = new User(null, $name,$email,$pass);
             $user->create();
         }elseif ($route[1] == 'delete') {
-            $user = new User(10, 'Renan','eliel@gmail.com','eliel');
+            $id = $_POST['id'];
+            $user = new User($id,null,null, null);
             $user->delete();
         }else{
             echo "Página não econtrada";
