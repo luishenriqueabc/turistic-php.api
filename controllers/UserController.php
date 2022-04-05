@@ -8,7 +8,7 @@
             $user->create();
         }elseif ($route[1] == 'delete') {
             $id = $_POST['id'];
-            $user = new User($id,null,null, null);
+            $user = new User($id,null,null,null);
             $user->delete();
         }elseif ($route[1] == 'update') {
             $id = $_POST['id'];
