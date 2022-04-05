@@ -1,5 +1,4 @@
 <?php 
-require ('helpers/database.php');
 class User{
     public $id;
     public $name;
@@ -23,7 +22,9 @@ class User{
             echo "Cadastrado com sucesso";
         }
         catch(PDOException $e){
-            echo "Error : " . $e->getMessage();
+            $result['message'] = "Erro ao criar" .$e-> getMessage();
+            $response = new Output();
+            $response->out($result, 500);
         }
     }
     function delete(){
@@ -35,7 +36,9 @@ class User{
             echo 'Deletado com sucesso';
         }
         catch(PDOException $e){
-            echo "Error : " . $e->getMessage();
+            $result['message'] = "Erro ao deletar" .$e-> getMessage();
+            $response = new Output();
+            $response->out($result, 500);
         }
       
     }
@@ -51,7 +54,9 @@ class User{
             echo "Update feito!";
            }
            catch(PDOException $e){
-            echo "Error : " . $e->getMessage();
+            $result['message'] = "Erro de update." .$e-> getMessage();
+            $response = new Output();
+            $response->out($result, 500);
         }
        }
        function selectAll(){
@@ -61,12 +66,15 @@ class User{
             $stmt->execute();
             $result = $stmt->fetchAll (PDO::FETCH_ASSOC);
 
-            header('Content-Type: application/json; charset=utf-8');
-            echo json_encode($result);
-            die;
+            $response = new Output();
+
+            $response->out($result);
+
         }
         catch(PDOException $e){
-         echo "Error : " . $e->getMessage();
+            $result['message'] = "404 - Rota api não encontrada." .$e-> getMessage();
+            $response = new Output();
+            $response->out($result, 404);
      }
     }
 

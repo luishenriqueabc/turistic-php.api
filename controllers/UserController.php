@@ -22,9 +22,13 @@
             $user->selectAll();
             
         }else{
-            echo "Página não econtrada";
+            $result['message'] = "404 - Rota api não encontrada.";
+            $response = new Output();
+            $response->out($result, 404);
         }
     }else{
-        echo "Página não econtrada";
+        $result['message'] = "404 - Rota api não encontrada.";
+        $response = new Output();
+        $response->out($result, 404);
     }
 ?>
