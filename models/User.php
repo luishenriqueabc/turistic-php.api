@@ -1,5 +1,5 @@
 <?php 
-require ('./helpers/database.php');
+require ('helpers/database.php');
 class User{
     public $id;
     public $name;
@@ -59,10 +59,11 @@ class User{
         try{
             $stmt = $db->conn->prepare("SELECT * FROM users");
             $stmt->execute();
-            $result = $stmt->fetchAll
-            (PDO::FETCH_ASSOC);
-            print_r($result);
-            echo "Selecionado";
+            $result = $stmt->fetchAll (PDO::FETCH_ASSOC);
+
+            header('Content-Type: application/json; charset=utf-8');
+            echo json_encode($result);
+            die;
         }
         catch(PDOException $e){
          echo "Error : " . $e->getMessage();

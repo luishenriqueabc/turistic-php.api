@@ -1,2 +1,0 @@
-# turistic-php.api
-
