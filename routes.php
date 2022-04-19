@@ -1,13 +1,17 @@
 <?php
-define('FOLDER','/lp2/api/'); // cria a constante caminho padrão
+require('config.php');
+
 $url = $_SERVER['REQUEST_URI']; // pega o que está na url
-$lengthStrFolder = strlen(FOLDER); // guarda o tamanho da constante folder
+$lengthStrFolder = strlen(BASE_URL_API); // guarda o tamanho da constante folder
 $urlClean = substr($url, $lengthStrFolder); // separa a string por partes
 
-$route = explode('/', $urlClean);
+$routeWithoutParameters = explode('?' , $urlClean);
+$route = explode("/", $routeWithoutParameters[0]);
 
 // carrega os autoloades
-require('helpers/autoloaders.php');
+require(HELPERS_FOLDER.'autoloaders.php');
+
+
 // cria objeto de resposta de api
 $response = new Output();
 
@@ -20,7 +24,7 @@ $controller_name = $route[0];
 $action = str_replace('-', '', $route[1]);
 
 //Checa se o controller existe
-$controller_path = 'controllers/' . $controller_name . 'Controller.php';
+$controller_path = CONTROLLERS_FOLDER. $controller_name . 'Controller.php';
 
 // checa se o arquivo do controller existe
 if(file_exists($controller_path)){
