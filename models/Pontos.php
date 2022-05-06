@@ -1,28 +1,29 @@
 <?php 
-class User{
+class Pontos{
 
     public $id;
     public $name;
-    public $email;
-    public $pass;
+    public $sobre;
+    public $foto;
     
-    function __construct($id, $name, $email, $pass) {
+    function __construct($id, $name, $sobre, $foto) {
         $this->id = $id;
         $this->name = $name;
-        $this->email = $email;
-        $this->pass = $pass;
+        $this->sobre = $sobre;
+        $this->foto = $foto;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO users (name, email, pass)
-            VALUES (:name, :email, :pass)");
+            $stmt = $db->conn->prepare("INSERT INTO pontos (name, sobre, foto)
+            VALUES (:name, :sobre, :foto)");
             $stmt->bindParam(':name' , $this->name);
-            $stmt->bindParam(':email' , $this->email);
-            $stmt->bindParam(':pass' , $this->pass);
+            $stmt->bindParam(':sobre' , $this->sobre);
+            $stmt->bindParam(':foto' , $this->foto);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
+
             return $id;
         }
         catch(PDOException $e){
@@ -35,7 +36,7 @@ class User{
     function delete(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("DELETE FROM users WHERE id = :id;");
+            $stmt = $db->conn->prepare("DELETE FROM pontos WHERE id = :id;");
             $stmt->bindParam(':id' , $this->id);
             $stmt->execute();
             return true;
@@ -50,11 +51,11 @@ class User{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE users SET name = :name,email=:email, pass=:pass WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE pontos SET name = :name, sobre=:sobre, foto=:foto WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
             $stmt->bindParam(':name' , $this->name);
-            $stmt->bindParam(':email' , $this->email);
-            $stmt->bindParam(':pass' , $this->pass);
+            $stmt->bindParam(':sobre' , $this->sobre);
+            $stmt->bindParam(':foto' , $this->foto);
             $stmt->execute();
             return true;
         }
@@ -68,7 +69,7 @@ class User{
     function selectAll(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM users");
+            $stmt = $db->conn->prepare("SELECT * FROM pontos ");
             $stmt->execute();
             $result = $stmt->fetchAll (PDO::FETCH_ASSOC);
             return $result;
@@ -82,7 +83,7 @@ class User{
     function selectById(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM users WHERE id = :id;");
+            $stmt = $db->conn->prepare("SELECT * FROM pontos WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
