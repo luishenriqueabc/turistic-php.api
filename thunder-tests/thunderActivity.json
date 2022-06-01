@@ -8,7 +8,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-05-23T18:00:49.964Z",
-    "modified": "2022-05-26T17:31:40.559Z",
+    "modified": "2022-05-23T18:00:49.985Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -103,6 +103,106 @@
         }
       ]
     },
+    "tests": []
+  },
+  {
+    "_id": "ed67cf69-6cce-4fb2-8e29-6f02c034a988",
+    "colId": "history",
+    "containerId": "",
+    "name": "Comment create",
+    "url": "http://localhost/LP2/api/comment/delete",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-01T00:06:32.178Z",
+    "modified": "2022-06-01T00:08:43.574Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "0e847f99-e4e0-4384-86b4-a5a7d96b83f2",
+    "colId": "history",
+    "containerId": "",
+    "name": "Comment delete",
+    "url": "http://localhost/LP2/api/comment/delete?id=3",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-01T00:08:28.883Z",
+    "modified": "2022-06-01T00:09:12.704Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "3",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "cdbb0655-a7cd-4892-ad62-be0616cbcfca",
+    "colId": "history",
+    "containerId": "",
+    "name": "Comment Update",
+    "url": "http://localhost/LP2/api/comment/update",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-01T00:10:53.850Z",
+    "modified": "2022-06-01T00:10:53.883Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "3"
+        },
+        {
+          "name": "email",
+          "value": "sdaa"
+        },
+        {
+          "name": "comentario",
+          "value": "sda"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "697a2d9c-540d-4daf-b179-9ac72680b691",
+    "colId": "history",
+    "containerId": "",
+    "name": "Comment select-all",
+    "url": "http://localhost/LP2/api/comment/select-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-01T00:12:26.399Z",
+    "modified": "2022-06-01T00:12:26.431Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]

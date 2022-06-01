@@ -5,5 +5,12 @@
     "created": "2022-05-23T18:09:28.965Z",
     "sortNum": 10000,
     "folders": []
+  },
+  {
+    "_id": "b62effae-967e-4164-bc3a-2d68da28a35a",
+    "colName": "Comment",
+    "created": "2022-06-01T00:05:36.101Z",
+    "sortNum": 20000,
+    "folders": []
   }
 ]
