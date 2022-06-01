@@ -5,22 +5,28 @@ class Pontos{
     public $name;
     public $sobre;
     public $foto;
+    public $foto2;
+    public $foto3;
     
-    function __construct($id, $name, $sobre, $foto) {
+    function __construct($id, $name, $sobre, $foto, $foto2, $foto3) {
         $this->id = $id;
         $this->name = $name;
         $this->sobre = $sobre;
         $this->foto = $foto;
+        $this->foto2 = $foto2;
+        $this->foto3 = $foto3;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO pontos (name, sobre, foto)
-            VALUES (:name, :sobre, :foto)");
+            $stmt = $db->conn->prepare("INSERT INTO pontos (name, sobre, foto,foto2,foto3)
+            VALUES (:name, :sobre, :foto,:foto2,:foto3)");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':sobre' , $this->sobre);
             $stmt->bindParam(':foto' , $this->foto);
+            $stmt->bindParam(':foto2' , $this->foto2);
+            $stmt->bindParam(':foto3' , $this->foto3);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
 
@@ -51,11 +57,13 @@ class Pontos{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE pontos SET name = :name, sobre=:sobre, foto=:foto WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE pontos SET name = :name, sobre=:sobre, foto=:foto, foto2=:foto2, foto3=:foto3 WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':sobre' , $this->sobre);
             $stmt->bindParam(':foto' , $this->foto);
+            $stmt->bindParam(':foto2' , $this->foto2);
+            $stmt->bindParam(':foto3' , $this->foto3);
             $stmt->execute();
             return true;
         }
