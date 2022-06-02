@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Select-all",
-    "url": "http://localhost/LP2/api/pontos/select-all",
+    "url": "http://localhost/LP2/api/pontos/select-by-id=29",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-05-23T18:00:49.964Z",
-    "modified": "2022-05-23T18:00:49.985Z",
+    "modified": "2022-06-02T17:57:38.893Z",
     "headers": [],
     "params": [],
     "tests": []
