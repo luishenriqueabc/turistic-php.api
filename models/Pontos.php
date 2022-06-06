@@ -4,29 +4,27 @@ class Pontos{
     public $id;
     public $name;
     public $sobre;
-    public $foto;
-    public $foto2;
-    public $foto3;
+    public $pertence;
+    public $quantaspessoas;
+
     
-    function __construct($id, $name, $sobre, $foto, $foto2, $foto3) {
+    function __construct($id, $name, $sobre, $pertence, $quantaspessoas) {
         $this->id = $id;
         $this->name = $name;
         $this->sobre = $sobre;
-        $this->foto = $foto;
-        $this->foto2 = $foto2;
-        $this->foto3 = $foto3;
+        $this->pertence = $pertence;
+        $this->quantaspessoas = $quantaspessoas;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO pontos (name, sobre, foto,foto2,foto3)
-            VALUES (:name, :sobre, :foto,:foto2,:foto3)");
+            $stmt = $db->conn->prepare("INSERT INTO pontos (name, sobre, pertence, quantaspessoas)
+            VALUES (:name, :sobre, :pertence, :quantaspessoas)");
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':sobre' , $this->sobre);
-            $stmt->bindParam(':foto' , $this->foto);
-            $stmt->bindParam(':foto2' , $this->foto2);
-            $stmt->bindParam(':foto3' , $this->foto3);
+            $stmt->bindParam(':pertence' , $this->pertence);
+            $stmt->bindParam(':quantaspessoas' , $this->quantaspessoas);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
 
@@ -57,13 +55,12 @@ class Pontos{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE pontos SET name = :name, sobre=:sobre, foto=:foto, foto2=:foto2, foto3=:foto3 WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE pontos SET name = :name, sobre=:sobre,  pertence = :pertence, quantaspessoas=:quantaspessoas WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
             $stmt->bindParam(':name' , $this->name);
             $stmt->bindParam(':sobre' , $this->sobre);
-            $stmt->bindParam(':foto' , $this->foto);
-            $stmt->bindParam(':foto2' , $this->foto2);
-            $stmt->bindParam(':foto3' , $this->foto3);
+            $stmt->bindParam(':pertence' , $this->pertence);
+            $stmt->bindParam(':quantaspessoas' , $this->quantaspessoas);
             $stmt->execute();
             return true;
         }

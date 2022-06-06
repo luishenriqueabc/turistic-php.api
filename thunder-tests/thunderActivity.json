@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Select-all",
-    "url": "http://localhost/LP2/api/pontos/select-by-id=29",
+    "url": "http://localhost/LP2/api/pontos/select-all",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-05-23T18:00:49.964Z",
-    "modified": "2022-06-02T17:57:38.893Z",
+    "modified": "2022-06-06T19:19:27.738Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T18:01:45.128Z",
-    "modified": "2022-05-23T18:04:51.395Z",
+    "modified": "2022-06-06T18:49:29.874Z",
     "headers": [],
     "params": [],
     "body": {
@@ -31,15 +31,19 @@
       "form": [
         {
           "name": "name",
-          "value": "Rj"
+          "value": "Sao Paulo"
         },
         {
           "name": "sobre",
-          "value": "Rj"
+          "value": "Cidade Linda"
         },
         {
-          "name": "foto",
-          "value": "Rj"
+          "name": "pertence",
+          "value": "Sao Paulo"
+        },
+        {
+          "name": "quantaspessoas",
+          "value": "Mais de 1.000"
         }
       ]
     },
@@ -54,7 +58,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T18:05:14.683Z",
-    "modified": "2022-05-23T18:05:14.698Z",
+    "modified": "2022-06-06T18:55:32.573Z",
     "headers": [],
     "params": [],
     "body": {
@@ -63,7 +67,7 @@
       "form": [
         {
           "name": "id",
-          "value": "5"
+          "value": "36"
         }
       ]
     },
@@ -78,7 +82,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T18:07:40.610Z",
-    "modified": "2022-05-23T18:07:40.693Z",
+    "modified": "2022-06-06T19:17:10.900Z",
     "headers": [],
     "params": [],
     "body": {
@@ -98,8 +102,12 @@
           "value": "spppp"
         },
         {
-          "name": "foto",
+          "name": "pertence",
           "value": "sppp"
+        },
+        {
+          "name": "quantaspessoas",
+          "value": "spppp"
         }
       ]
     },
