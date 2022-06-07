@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-05-23T18:01:45.128Z",
-    "modified": "2022-06-06T18:49:29.874Z",
+    "modified": "2022-06-07T18:15:15.542Z",
     "headers": [],
     "params": [],
     "body": {
@@ -30,20 +30,32 @@
       "raw": "",
       "form": [
         {
+          "name": "foto",
+          "value": "sdasdad"
+        },
+        {
+          "name": "foto2",
+          "value": "asdasdda"
+        },
+        {
+          "name": "foto3",
+          "value": "asdasdasd"
+        },
+        {
           "name": "name",
-          "value": "Sao Paulo"
+          "value": "asdasd"
         },
         {
           "name": "sobre",
-          "value": "Cidade Linda"
+          "value": "asdasd"
         },
         {
           "name": "pertence",
-          "value": "Sao Paulo"
+          "value": "asdasd"
         },
         {
           "name": "quantaspessoas",
-          "value": "Mais de 1.000"
+          "value": "sadas"
         }
       ]
     },
