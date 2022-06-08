@@ -4,20 +4,26 @@ class Comment{
     public $id;
     public $email;
     public $comentario;
+    public $comentario2;
+    public $comentario3;
     
-    function __construct($id, $email, $comentario) {
+    function __construct($id, $email, $comentario, $comentario2, $comentario3) {
         $this->id = $id;
         $this->email = $email;
         $this->comentario = $comentario;
+        $this->comentario2 = $comentario2;
+        $this->comentario3 = $comentario3;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO comment (email, comentario)
-            VALUES (:email, :comentario)");
+            $stmt = $db->conn->prepare("INSERT INTO comment (email, comentario, comentario2, comentario3)
+            VALUES (:email, :comentario, :comentario2, :comentario3)");
             $stmt->bindParam(':email' , $this->email);
             $stmt->bindParam(':comentario' , $this->comentario);
+            $stmt->bindParam(':comentario2' , $this->comentario2);
+            $stmt->bindParam(':comentario3' , $this->comentario3);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
 
@@ -48,10 +54,12 @@ class Comment{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE comment SET email = :email, comentario=:comentario WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE comment SET email = :email, comentario=:comentario, comentario2=:comentario2, comentario3=:comentario3 WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
             $stmt->bindParam(':email' , $this->email);
             $stmt->bindParam(':comentario' , $this->comentario);
+            $stmt->bindParam(':comentario2' , $this->comentario2);
+            $stmt->bindParam(':comentario3' , $this->comentario3);
             $stmt->execute();
             return true;
         }
