@@ -130,7 +130,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-06-01T00:06:51.195Z",
-    "modified": "2022-06-08T18:37:12.946Z",
+    "modified": "2022-06-09T18:31:45.693Z",
     "headers": [],
     "params": [],
     "body": {
@@ -139,19 +139,11 @@
       "form": [
         {
           "name": "email",
-          "value": "xcz"
+          "value": "sadsdasd"
         },
         {
           "name": "comentario",
-          "value": "zxc"
-        },
-        {
-          "name": "comentario2",
-          "value": "sd"
-        },
-        {
-          "name": "comentario3",
-          "value": "asda"
+          "value": "zxcasdadsadas"
         }
       ]
     },
@@ -229,6 +221,104 @@
     "sortNum": 40000,
     "created": "2022-06-01T00:12:54.194Z",
     "modified": "2022-06-01T00:12:54.194Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "acae05fc-8296-4cf4-9066-e7a5075b1f0a",
+    "colId": "f28fde14-adc9-47c5-af5e-e3216e58ba50",
+    "containerId": "",
+    "name": "Figure create",
+    "url": "http://localhost/LP2/api/figure/create",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-06-09T19:53:56.216Z",
+    "modified": "2022-06-09T19:53:56.216Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "abb.png"
+        },
+        {
+          "name": "nome",
+          "value": "luis"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "3002a2ba-36e7-41fa-8829-9579df308149",
+    "colId": "f28fde14-adc9-47c5-af5e-e3216e58ba50",
+    "containerId": "",
+    "name": "Figure Delete",
+    "url": "http://localhost/LP2/api/figure/delete",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-06-09T19:56:34.223Z",
+    "modified": "2022-06-09T19:56:34.223Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "9b1e5eba-331a-44c8-b572-8fc38907364c",
+    "colId": "f28fde14-adc9-47c5-af5e-e3216e58ba50",
+    "containerId": "",
+    "name": "Figure Update",
+    "url": "http://localhost/LP2/api/figure/update",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-06-09T19:58:08.137Z",
+    "modified": "2022-06-09T19:58:08.137Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        },
+        {
+          "name": "foto",
+          "value": "abbb"
+        },
+        {
+          "name": "nome",
+          "value": "abbbbb"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "f9b60111-a41c-4b4e-8719-15bbeb4c31b2",
+    "colId": "f28fde14-adc9-47c5-af5e-e3216e58ba50",
+    "containerId": "",
+    "name": "Figure Select-all",
+    "url": "http://localhost/LP2/api/figure/select-all",
+    "method": "GET",
+    "sortNum": 40000,
+    "created": "2022-06-09T19:59:07.424Z",
+    "modified": "2022-06-09T19:59:07.424Z",
     "headers": [],
     "params": [],
     "tests": []

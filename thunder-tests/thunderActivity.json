@@ -224,5 +224,173 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "88640e43-b3a9-40c0-8816-10a72e956b29",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/LP2/api/figure/create",
+    "url": "http://localhost/LP2/api/figure/create",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T19:45:23.173Z",
+    "modified": "2022-06-09T19:53:06.545Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "abb.png"
+        },
+        {
+          "name": "nome",
+          "value": "luis"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "a7c8a010-8cdd-4839-b502-4b229711ce8e",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/LP2/api/figure/select-all ",
+    "url": "http://localhost/LP2/api/figure/select-all ",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T19:46:39.247Z",
+    "modified": "2022-06-09T19:46:42.127Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "sassssssssssss.png"
+        },
+        {
+          "name": "nome",
+          "value": "ingles"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "9fca2598-2fd8-4b98-b8ff-c75162f1a6da",
+    "colId": "history",
+    "containerId": "",
+    "name": "Figure create",
+    "url": "http://localhost/LP2/api/figure/create",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T19:53:21.094Z",
+    "modified": "2022-06-09T19:53:21.146Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "foto",
+          "value": "abb.png"
+        },
+        {
+          "name": "nome",
+          "value": "luis"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "c16fad09-8c84-4f89-97ca-b939d6599a93",
+    "colId": "history",
+    "containerId": "",
+    "name": "Figure Delete",
+    "url": "http://localhost/LP2/api/figure/delete",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T19:55:58.931Z",
+    "modified": "2022-06-09T19:55:59.012Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "501d584d-24a7-4948-bb33-925c94fc3967",
+    "colId": "history",
+    "containerId": "",
+    "name": "Figure Update",
+    "url": "http://localhost/LP2/api/figure/update",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T19:57:34.888Z",
+    "modified": "2022-06-09T19:57:34.906Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        },
+        {
+          "name": "foto",
+          "value": "abbb"
+        },
+        {
+          "name": "nome",
+          "value": "abbbbb"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "76c97fab-734c-4bca-8b4a-917a70b430c2",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost/LP2/api/figure/select-all",
+    "url": "http://localhost/LP2/api/figure/select-all",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-06-09T19:58:26.798Z",
+    "modified": "2022-06-09T19:58:26.812Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0ec0bd27-f8a3-4611-a564-0ed286eb26b0",
+    "colId": "history",
+    "containerId": "",
+    "name": "Figure Select-all",
+    "url": "http://localhost/LP2/api/figure/select-all",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-06-09T19:58:30.332Z",
+    "modified": "2022-06-09T19:58:30.348Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]

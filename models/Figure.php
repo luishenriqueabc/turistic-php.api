@@ -1,24 +1,24 @@
 <?php 
-class Comment{
+class Figure{
 
     public $id;
-    public $email;
-    public $comentario;
+    public $foto;
+    public $nome;
    
     
-    function __construct($id, $email, $comentario) {
+    function __construct($id, $foto, $nome) {
         $this->id = $id;
-        $this->email = $email;
-        $this->comentario = $comentario;
+        $this->foto = $foto;
+        $this->nome = $nome;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO comment (email, comentario)
-            VALUES (:email, :comentario)");
-            $stmt->bindParam(':email' , $this->email);
-            $stmt->bindParam(':comentario' , $this->comentario);
+            $stmt = $db->conn->prepare("INSERT INTO figure (foto, nome)
+            VALUES (:foto, :nome)");
+            $stmt->bindParam(':foto' , $this->foto);
+            $stmt->bindParam(':nome' , $this->nome);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
 
@@ -34,7 +34,7 @@ class Comment{
     function delete(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("DELETE FROM comment WHERE id = :id;");
+            $stmt = $db->conn->prepare("DELETE FROM figure WHERE id = :id;");
             $stmt->bindParam(':id' , $this->id);
             $stmt->execute();
             return true;
@@ -49,10 +49,10 @@ class Comment{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE comment SET email = :email, comentario=:comentario WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE figure SET foto = :foto, nome=:nome WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
-            $stmt->bindParam(':email' , $this->email);
-            $stmt->bindParam(':comentario' , $this->comentario);
+            $stmt->bindParam(':foto' , $this->foto);
+            $stmt->bindParam(':nome' , $this->nome);
             $stmt->execute();
             return true;
         }
@@ -66,7 +66,7 @@ class Comment{
     function selectAll(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM comment ");
+            $stmt = $db->conn->prepare("SELECT * FROM figure ");
             $stmt->execute();
             $result = $stmt->fetchAll (PDO::FETCH_ASSOC);
             return $result;
@@ -80,7 +80,7 @@ class Comment{
     function selectById(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM comment WHERE id = :id;");
+            $stmt = $db->conn->prepare("SELECT * FROM figure WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
