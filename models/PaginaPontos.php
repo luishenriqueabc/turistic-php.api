@@ -1,24 +1,39 @@
 <?php 
-class Figure{
+class PaginaPontos{
 
     public $id;
     public $foto;
-    public $nome;
-   
+    public $foto2;
+    public $foto3;
+    public $name;
+    public $sobre;
+    public $pertence;
+    public $quantaspessoas;
+
     
-    function __construct($id, $foto, $nome) {
-        $this->id = $id;
-        $this->foto = $foto;
-        $this->nome = $nome;
+    function __construct($id, $foto, $foto2, $foto3,  $name, $sobre, $pertence, $quantaspessoas) {
+    $this->id = $id;
+    $this->foto = $foto;
+    $this->foto2 = $foto2;
+    $this->foto3 = $foto3;
+    $this->name = $name;
+    $this->sobre = $sobre;
+    $this->pertence = $pertence;
+    $this->quantaspessoas = $quantaspessoas;
     }
     
     function create(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("INSERT INTO figure (foto, nome)
-            VALUES (:foto, :nome)");
+            $stmt = $db->conn->prepare("INSERT INTO paginapontos (foto, foto2, foto3,name, sobre, pertence, quantaspessoas)
+            VALUES (:foto, :foto2, :foto3,:name, :sobre, :pertence, :quantaspessoas)");
             $stmt->bindParam(':foto' , $this->foto);
-            $stmt->bindParam(':nome' , $this->nome);
+            $stmt->bindParam(':foto2' , $this->foto2);
+            $stmt->bindParam(':foto3' , $this->foto3);
+            $stmt->bindParam(':name' , $this->name);
+            $stmt->bindParam(':sobre' , $this->sobre);
+            $stmt->bindParam(':pertence' , $this->pertence);
+            $stmt->bindParam(':quantaspessoas' , $this->quantaspessoas);
             $stmt->execute();
             $id = $db->conn->lastInsertId();
 
@@ -34,7 +49,7 @@ class Figure{
     function delete(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("DELETE FROM figure WHERE id = :id;");
+            $stmt = $db->conn->prepare("DELETE FROM paginapontos WHERE id = :id;");
             $stmt->bindParam(':id' , $this->id);
             $stmt->execute();
             return true;
@@ -49,10 +64,15 @@ class Figure{
     function update(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("UPDATE figure SET foto = :foto, nome=:nome WHERE id= :id");
+            $stmt = $db->conn->prepare("UPDATE paginapontos SET foto = :foto, foto2=:foto2,  foto3 = :foto3,name = :name, sobre=:sobre,  pertence = :pertence, quantaspessoas=:quantaspessoas WHERE id= :id");
             $stmt->bindParam(':id' , $this->id);
             $stmt->bindParam(':foto' , $this->foto);
-            $stmt->bindParam(':nome' , $this->nome);
+            $stmt->bindParam(':foto2' , $this->foto2);
+            $stmt->bindParam(':foto3' , $this->foto3);
+            $stmt->bindParam(':name' , $this->name);
+            $stmt->bindParam(':sobre' , $this->sobre);
+            $stmt->bindParam(':pertence' , $this->pertence);
+            $stmt->bindParam(':quantaspessoas' , $this->quantaspessoas);
             $stmt->execute();
             return true;
         }
@@ -66,7 +86,7 @@ class Figure{
     function selectAll(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM figure");
+            $stmt = $db->conn->prepare("SELECT * FROM paginapontos ");
             $stmt->execute();
             $result = $stmt->fetchAll (PDO::FETCH_ASSOC);
             return $result;
@@ -80,7 +100,7 @@ class Figure{
     function selectById(){
         $db = new Database();
         try{
-            $stmt = $db->conn->prepare("SELECT * FROM figure WHERE id = :id;");
+            $stmt = $db->conn->prepare("SELECT * FROM paginapontos WHERE id = :id;");
             $stmt->bindParam(':id', $this->id);
             $stmt->execute();
             $result = $stmt->fetch(PDO::FETCH_ASSOC);

@@ -383,14 +383,24 @@
     "_id": "0ec0bd27-f8a3-4611-a564-0ed286eb26b0",
     "colId": "history",
     "containerId": "",
-    "name": "Figure Select-all",
-    "url": "http://localhost/LP2/api/figure/select-all",
-    "method": "GET",
+    "name": "Pagina Pontos Create",
+    "url": "http://localhost/LP2/api/paginapontos/delete",
+    "method": "POST",
     "sortNum": 0,
     "created": "2022-06-09T19:58:30.332Z",
-    "modified": "2022-06-09T19:58:30.348Z",
+    "modified": "2022-06-20T11:17:05.650Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    },
     "tests": []
   }
 ]
