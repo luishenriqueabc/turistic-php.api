@@ -6,17 +6,29 @@ class FigureController{
         $response->allowedMethod('POST'); 
         // entrada  
         $foto = $_POST['foto'];
+        $foto2 = $_POST['foto2'];
+        $foto3 = $_POST['foto3'];
+        $fotodofigure = $_POST['fotodofigure'];
         $nome = $_POST['nome'];
+        $sobre = $_POST['sobre'];
+        $pertence = $_POST['pertence'];
+        $quantaspessoas = $_POST['quantaspessoas'];
       
         
-        $figure = new Figure(null, $foto, $nome);
+        $figure = new Figure(null, $foto, $foto2, $foto3,$fotodofigure, $nome, $sobre, $pertence, $quantaspessoas);
         $id = $figure->create();
 
         // saida
         $result['message'] = "Figura feita com sucesso";
         $result['figure']['id'] = $id;
         $result['figure']['foto'] = $foto;
+        $result['figure']['foto2'] = $foto2;
+        $result['figure']['foto3'] = $foto3;
+        $result['figure']['fotodofigure'] = $fotodofigure;
         $result['figure']['nome'] = $nome;
+        $result['figure']['sobre'] = $sobre;
+        $result['figure']['pertence'] = $pertence;
+        $result['figure']['quantaspessoas'] = $quantaspessoas;
         $response->out($result);
     }
   
@@ -25,7 +37,7 @@ class FigureController{
         $response->allowedMethod('POST'); 
 
         $id = $_POST['id'];
-        $figure= new Figure ($id,null,null);
+        $figure= new Figure ($id,null,null,null,null,null,null,null,null);
         $figure->delete();
         $result['message'] = "Figura deletada com sucesso";
         $result['figure']['id'] = $id;
@@ -37,15 +49,26 @@ class FigureController{
         $response->allowedMethod('POST');
 
 
-        $id = $_POST['id'];
         $foto = $_POST['foto'];
+        $foto2 = $_POST['foto2'];
+        $foto3 = $_POST['foto3'];
+        $fotodofigure = $_POST['fotodofigure'];
         $nome = $_POST['nome'];
-        $figure = new Figure($id,$foto,$nome);
+        $sobre = $_POST['sobre'];
+        $pertence = $_POST['pertence'];
+        $quantaspessoas = $_POST['quantaspessoas'];
+        $figure = new Figure($id, $foto, $foto2, $foto3,$fotodofigure, $nome, $sobre, $pertence, $quantaspessoas);
         $figure->update();
         $result['message'] = "nome editado feito com Sucesso";
         $result['figure']['id'] = $id;
         $result['figure']['foto'] = $foto;
+        $result['figure']['foto2'] = $foto2;
+        $result['figure']['foto3'] = $foto3;
+        $result['figure']['fotodofigure'] = $fotodofigure;
         $result['figure']['nome'] = $nome;
+        $result['figure']['sobre'] = $sobre;
+        $result['figure']['pertence'] = $pertence;
+        $result['figure']['quantaspessoas'] = $quantaspessoas;
         $response->out($result);
     }
 
@@ -53,7 +76,7 @@ class FigureController{
         $response = new Output();
         $response->allowedMethod('GET');
 
-        $figure= new Figure(null,null,null);
+        $figure= new Figure(null,null,null,null,null,null,null,null,null);
         $result = $figure->selectAll();
         $response->out($result);
 
@@ -63,7 +86,7 @@ class FigureController{
         $response = new Output();
         $response->allowedMethod('GET');
         $id = $_GET['id'];
-        $figure = new Figure ($id,null,null);
+        $figure = new Figure ($id,null,null,null,null,null,null,null,null);
         $result = $figure->selectById();
         
         $response->out($result);

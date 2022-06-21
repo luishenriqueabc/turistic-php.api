@@ -290,7 +290,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-09T19:53:21.094Z",
-    "modified": "2022-06-09T19:53:21.146Z",
+    "modified": "2022-06-21T20:12:25.280Z",
     "headers": [],
     "params": [],
     "body": {
@@ -299,11 +299,35 @@
       "form": [
         {
           "name": "foto",
-          "value": "abb.png"
+          "value": "abbpng"
+        },
+        {
+          "name": "foto2",
+          "value": "luis"
+        },
+        {
+          "name": "foto3",
+          "value": "sdsasdasda"
+        },
+        {
+          "name": "fotodofigure",
+          "value": "sasda"
         },
         {
           "name": "nome",
-          "value": "luis"
+          "value": "sswd"
+        },
+        {
+          "name": "sobre",
+          "value": "asdads"
+        },
+        {
+          "name": "pertence",
+          "value": "asasdasd"
+        },
+        {
+          "name": "quantaspessoas",
+          "value": "sadd"
         }
       ]
     },
@@ -384,11 +408,11 @@
     "colId": "history",
     "containerId": "",
     "name": "Pagina Pontos Create",
-    "url": "http://localhost/LP2/api/paginapontos/delete",
-    "method": "POST",
+    "url": "http://localhost/LP2/api/figure/create",
+    "method": "GET",
     "sortNum": 0,
     "created": "2022-06-09T19:58:30.332Z",
-    "modified": "2022-06-20T11:17:05.650Z",
+    "modified": "2022-06-21T19:56:01.627Z",
     "headers": [],
     "params": [],
     "body": {
@@ -396,8 +420,36 @@
       "raw": "",
       "form": [
         {
-          "name": "id",
-          "value": "1"
+          "name": "foto",
+          "value": "as"
+        },
+        {
+          "name": "foto2",
+          "value": "qew"
+        },
+        {
+          "name": "foto3",
+          "value": "qwe"
+        },
+        {
+          "name": "fotodofigure",
+          "value": "wqeqqweqwe"
+        },
+        {
+          "name": "nome",
+          "value": "wqeweqweq"
+        },
+        {
+          "name": "sobre",
+          "value": "qwe"
+        },
+        {
+          "name": "pertence",
+          "value": "qweqwe"
+        },
+        {
+          "name": "quantaspessoas",
+          "value": "qqwqwe"
         }
       ]
     },

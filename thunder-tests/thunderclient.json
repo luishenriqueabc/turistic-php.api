@@ -234,7 +234,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-06-09T19:53:56.216Z",
-    "modified": "2022-06-09T19:53:56.216Z",
+    "modified": "2022-06-21T20:39:10.476Z",
     "headers": [],
     "params": [],
     "body": {
@@ -243,11 +243,35 @@
       "form": [
         {
           "name": "foto",
-          "value": "abb.png"
+          "value": "anima"
+        },
+        {
+          "name": "foto2",
+          "value": "Pelourinho"
+        },
+        {
+          "name": "foto3",
+          "value": "sd"
+        },
+        {
+          "name": "fotodofigure",
+          "value": "sda"
         },
         {
           "name": "nome",
-          "value": "luis"
+          "value": "sd"
+        },
+        {
+          "name": "sobre",
+          "value": "sd"
+        },
+        {
+          "name": "pertence",
+          "value": "sd"
+        },
+        {
+          "name": "quantaspessoas",
+          "value": "dssaadsda"
         }
       ]
     },
@@ -321,54 +345,6 @@
     "modified": "2022-06-09T19:59:07.424Z",
     "headers": [],
     "params": [],
-    "tests": []
-  },
-  {
-    "_id": "cc1198d8-2134-4e33-9701-f9e74699d650",
-    "colId": "8d509b57-78b5-4ebf-99d9-633d8fc12737",
-    "containerId": "",
-    "name": "Pagina Pontos Create",
-    "url": "http://localhost/LP2/api/paginapontos/create",
-    "method": "POST",
-    "sortNum": 10000,
-    "created": "2022-06-20T11:16:32.012Z",
-    "modified": "2022-06-20T18:33:26.160Z",
-    "headers": [],
-    "params": [],
-    "body": {
-      "type": "formdata",
-      "raw": "",
-      "form": [
-        {
-          "name": "name",
-          "value": "Pelourinho"
-        },
-        {
-          "name": "sobre",
-          "value": ""
-        },
-        {
-          "name": "pertence",
-          "value": "as"
-        },
-        {
-          "name": "quantaspessoas",
-          "value": "as"
-        },
-        {
-          "name": "foto",
-          "value": "Pelourinho2.jpg"
-        },
-        {
-          "name": "foto2",
-          "value": "Pelourinho3.jpg"
-        },
-        {
-          "name": "foto3",
-          "value": "Pelourinho4.jpg"
-        }
-      ]
-    },
     "tests": []
   }
 ]
