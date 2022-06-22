@@ -46,6 +46,7 @@ class FigureController{
 
         $id = $_POST['id'];
         $foto = $_POST['foto'];
+        $nome = $_POST['nome'];
         $nome2 = $_POST['nome2'];
         $nome3 = $_POST['nome3'];
         $nome4 = $_POST['nome4'];

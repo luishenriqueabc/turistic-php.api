@@ -290,7 +290,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-09T19:53:21.094Z",
-    "modified": "2022-06-22T12:34:55.743Z",
+    "modified": "2022-06-22T16:35:22.926Z",
     "headers": [],
     "params": [],
     "body": {
@@ -299,35 +299,23 @@
       "form": [
         {
           "name": "foto",
-          "value": "121212"
-        },
-        {
-          "name": "foto2",
-          "value": "sad"
-        },
-        {
-          "name": "foto3",
-          "value": "sd"
-        },
-        {
-          "name": "fotodofigure",
-          "value": "d"
+          "value": "121212adasd"
         },
         {
           "name": "nome",
-          "value": "sd"
+          "value": "asd"
         },
         {
-          "name": "sobre",
-          "value": "sd"
+          "name": "nome2",
+          "value": "adasd"
         },
         {
-          "name": "pertence",
-          "value": "sd"
+          "name": "nome3",
+          "value": "adssads"
         },
         {
-          "name": "quantaspessoas",
-          "value": "sd"
+          "name": "nome4",
+          "value": "adasd"
         }
       ]
     },
@@ -366,7 +354,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-06-09T19:57:34.888Z",
-    "modified": "2022-06-09T19:57:34.906Z",
+    "modified": "2022-06-22T17:16:20.557Z",
     "headers": [],
     "params": [],
     "body": {
@@ -375,7 +363,7 @@
       "form": [
         {
           "name": "id",
-          "value": "1"
+          "value": "40"
         },
         {
           "name": "foto",
@@ -383,7 +371,19 @@
         },
         {
           "name": "nome",
-          "value": "abbbbb"
+          "value": "abbbbbasdads"
+        },
+        {
+          "name": "nome2",
+          "value": "asd345"
+        },
+        {
+          "name": "nome3",
+          "value": "asdasdsdasdads"
+        },
+        {
+          "name": "nome4",
+          "value": "asd"
         }
       ]
     },
