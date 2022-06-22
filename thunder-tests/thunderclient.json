@@ -234,7 +234,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-06-09T19:53:56.216Z",
-    "modified": "2022-06-21T20:39:10.476Z",
+    "modified": "2022-06-22T14:03:36.669Z",
     "headers": [],
     "params": [],
     "body": {
@@ -246,32 +246,20 @@
           "value": "anima"
         },
         {
-          "name": "foto2",
-          "value": "Pelourinho"
-        },
-        {
-          "name": "foto3",
-          "value": "sd"
-        },
-        {
-          "name": "fotodofigure",
-          "value": "sda"
-        },
-        {
           "name": "nome",
           "value": "sd"
         },
         {
-          "name": "sobre",
-          "value": "sd"
+          "name": "nome2",
+          "value": "sdsad"
         },
         {
-          "name": "pertence",
-          "value": "sd"
-        },
-        {
-          "name": "quantaspessoas",
+          "name": "nome3",
           "value": "dssaadsda"
+        },
+        {
+          "name": "nome4",
+          "value": "kopk"
         }
       ]
     },
