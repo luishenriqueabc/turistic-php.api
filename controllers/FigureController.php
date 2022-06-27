@@ -51,7 +51,7 @@ class FigureController{
         $nome3 = $_POST['nome3'];
         $nome4 = $_POST['nome4'];
       
-        $figure = new Figure(null, $foto, $nome, $nome2, $nome3, $nome4);
+        $figure = new Figure($id, $foto, $nome, $nome2, $nome3, $nome4);
         $figure->update();
         $result['message'] = "nome editado feito com Sucesso";
         $result['figure']['id'] = $id;
